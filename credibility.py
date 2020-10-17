@@ -1,12 +1,13 @@
 # credibility algorithhm
 
 # how to define credibility
-# - verification
-# - number of times user is flagged
+# - verification -- NO
+# - number of times user is flagged -- YES
 # - compiling list of whether user is using mostly opinion vs fact based writing
-# - how long user has been a member
-# - number of retweets and likes -- idk about this?
-# - user affiliates -- im not sure if this is good either, could lead to sketchhy profiling
+# - how long user has been a member -- maybe
+# - number of retweets and likes -- idk about this? NOO
+# - user affiliates -- im not sure if this is good either, could lead to sketchhy profiling NOO
+# - database of potentially sketchy information cross reference
 
 # how these parameters work
 	# user will be either be rewarded or marked down based on twitter usage
@@ -17,11 +18,6 @@
 	# we add them up to determine final grade
 
 # FUNCTIONS WE NEED
-
-# determine if user is verified & return score
-	# users wil not be penalized for not being verified
-	# JK MAYBE NOT
-# score weight up to: ______
 
 # determine user flags and return score
 	# determine if user has been flagged for abuse
@@ -40,13 +36,6 @@
 	# can find api that distinguishes how many logical fallacies a person has
 	# implement a fact checker? 
 	# score weight up to: _____
-
-# determine user membership age
-	# this will be worth little, but longer members will have higher score
-	# im thinking we can trust members who have been members longer 
-	# determine if a bot as well 
-
-# 
 
 
 # OUTPUT
