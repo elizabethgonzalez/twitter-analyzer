@@ -62,10 +62,16 @@ flags = {
 }
 
 hatespeech = hatebaase.hatebase()
-print(type(hatespeech))
+bank = []
+for i in hatespeech:
+	if hatespeech[i] in msg:
+		bank.append(hatespeech[i])
+
+len = length(bank)
+if len > 1:
+	flag = 1
 
 
- 
 
 
 
