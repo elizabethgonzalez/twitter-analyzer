@@ -36,48 +36,23 @@
 	# how do we take into account like normally 
 	# can find api that distinguishes how many logical fallacies a person has
 	# implement a fact checker? 
-	# score weight up to: _____
-
-
-# INPUT
+	# score weight up to: ____
+	
 import json
 import requests
 from textblob import TextBlob
 
 msg = input('tweet\n')
 
-# # establish categories
-# API_KEY = 'hcTLxGHqcQXqTZNHCEnzywEfvHuKDWbJ' 
-
-# def analyze():
-# 	params = {
-# 		'appid': API_KEY,
-# 	}
-
-# 	response = requests.get('http://api.hatebase.org/4-4/authenticate', params)
-
-# 	if response.status_code == 200: # Status: O
-# 		print('here')
-# 		print(response)
-# 	data = response.json()
-# 	print(data)
-# 		# TODO: Extract the temperature & humidity from data, and return as a tuple
-# 	#     return 0
-
-# 	# else:
-# 	#     print('error: got response code %d' % response.status_code)
-# 	#     print(response.text)
-# 	#     return 0.0, 0.0
-
 #Determine user subjectivity
 blob = TextBlob(msg)
 opinions = blob.subjectivity
 extreme = blob.polarity
-keywords = blob.noun_phrases
+keywords = blob.noun_phrases # keyword phrases
 
-# assign weighted scores to each flag
+# assign weighted scores to each flag 
 flags = {
-	'not_interest': '',
+	'not_interest': 0,
 	'spam': {'fake': '', 'phish': '', 'hashtags': '', 'reply': '', 'else': ''},
 	'abusive': {'disrespectful': '', 'private': '', 
 		'harassment': '', 'direct_hate': '', 'threatening': '', 'self_harm': ''},
@@ -85,7 +60,7 @@ flags = {
 	'self_harm': '',
 }
 
-# keyword phrases
+
  
 
 
@@ -94,7 +69,12 @@ flags = {
 # final score and json file with percentages in each category
 # response text
 
+## TWITTER KEYS
+
+#API Key: MqoUC5kAI8mtm5HQNBtp4FgSQ
+
+#API Secret Key lR6V3ZcqemAsa0tlmjjN4OVNAjXTg1SDFcuYcXmPL0QHyT68dV
+
+#Bearer token: AAAAAAAAAAAAAAAAAAAAAKuVIwEAAAAAMsicGY0L1kTAhybeCj%2B8gE4Tpwk%3Dz6rFwfmqnqcnnMcm0KSWVK4pALS0yeE65K5LVfPlnwNjo8nliQ
+
 if __name__ == '__main__':
-	print(opinions)
-	print(extreme)
-	print(nouns)
