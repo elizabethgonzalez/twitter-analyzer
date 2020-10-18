@@ -41,6 +41,7 @@
 import json
 import requests
 from textblob import TextBlob
+import hatebaase
 
 msg = input('tweet\n')
 
@@ -60,6 +61,9 @@ flags = {
 	'self_harm': '',
 }
 
+hatespeech = hatebaase.hatebase()
+print(type(hatespeech))
+
 
  
 
@@ -77,4 +81,4 @@ flags = {
 
 #Bearer token: AAAAAAAAAAAAAAAAAAAAAKuVIwEAAAAAMsicGY0L1kTAhybeCj%2B8gE4Tpwk%3Dz6rFwfmqnqcnnMcm0KSWVK4pALS0yeE65K5LVfPlnwNjo8nliQ
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
