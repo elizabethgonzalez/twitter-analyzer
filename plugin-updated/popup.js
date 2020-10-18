@@ -6,12 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
       chrome.tabs.executeScript({
         file: 'parse.js'},
         function(results) {
-          if (results)
-            {document.getElementsByClassName("report")[0].innerHTML = results;}
-          else {
-              document.getElementsByClassName("report")[0].innerHTML = "something happened";
-            }
-
+          document.getElementsByClassName("report")[0].innerHTML = results;
         }
       );
     });
