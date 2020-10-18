@@ -8,6 +8,7 @@
 # - number of retweets and likes -- idk about this? NOO
 # - user affiliates -- im not sure if this is good either, could lead to sketchhy profiling NOO
 # - database of potentially sketchy information cross reference
+# - related information section
 
 # how these parameters work
 	# user will be either be rewarded or marked down based on twitter usage
@@ -38,6 +39,26 @@
 	# score weight up to: _____
 
 
+# INPUT
+import json
+
+msg = input('tweet\n')
+
+# establish categories
+
+# assign weighted scores to each flag
+flags = {
+	'not_interest': '',
+	'spam': {'fake': '', 'phish': '', 'hashtags': '', 'reply': '', 'else': ''},
+	'abusive': {'disrespectful': '', 'private': '', 
+		'harassment': '', 'direct_hate': '', 'threatening': '', 'self_harm': ''},
+	'misleading': {'false_info': '', 'suppress': '', 'misrepresents': ''},
+	'self_harm': '',
+}
+
 # OUTPUT
 
 # final score and json file with percentages in each category
+#print(score)
+#print(score_cat)
+## 
