@@ -41,11 +41,32 @@
 
 # INPUT
 import json
+import requests
 
 msg = input('tweet\n')
 
 # establish categories
+API_KEY = 'hcTLxGHqcQXqTZNHCEnzywEfvHuKDWbJ' 
 
+def analyze():
+	params = {
+		'appid': API_KEY,
+	}
+
+	response = requests.get('http://api.hatebase.org/4-4/authenticate', params)
+
+	if response.status_code == 200: # Status: O
+		print('here')
+		print(response)
+	data = response.json()
+	print(data)
+		# TODO: Extract the temperature & humidity from data, and return as a tuple
+	#     return 0
+
+	# else:
+	#     print('error: got response code %d' % response.status_code)
+	#     print(response.text)
+	#     return 0.0, 0.0
 # assign weighted scores to each flag
 flags = {
 	'not_interest': '',
@@ -57,8 +78,10 @@ flags = {
 }
 
 # OUTPUT
-
+print(flags['not_interest'])
 # final score and json file with percentages in each category
 #print(score)
 #print(score_cat)
 ## 
+if __name__ == '__main__':
+	analyze()
